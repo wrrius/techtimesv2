@@ -1,11 +1,8 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Homepage = exports.homepageSchema = void 0;
-const mongoose_1 = __importDefault(require("mongoose"));
-const homepageSchema = new mongoose_1.default.Schema({
+var mongoose_1 = require("mongoose");
+var homepageSchema = new mongoose_1.default.Schema({
     title: {
         type: String,
         required: true,
@@ -48,7 +45,7 @@ const homepageSchema = new mongoose_1.default.Schema({
 }, {
     timestamps: true,
     toJSON: {
-        transform(doc, ret) {
+        transform: function (doc, ret) {
             ret.id = ret._id;
             delete ret._id;
             delete ret.__v;
@@ -56,9 +53,9 @@ const homepageSchema = new mongoose_1.default.Schema({
     },
 });
 exports.homepageSchema = homepageSchema;
-homepageSchema.statics.build = (attrs) => {
+homepageSchema.statics.build = function (attrs) {
     return new Homepage(attrs);
 };
 mongoose_1.default.deleteModel("Homepage");
-const Homepage = mongoose_1.default.model("Homepage", homepageSchema);
+var Homepage = mongoose_1.default.model("Homepage", homepageSchema);
 exports.Homepage = Homepage;

@@ -1,16 +1,13 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.app = void 0;
-const http_errors_1 = __importDefault(require("http-errors"));
-const express_1 = __importDefault(require("express"));
-const path_1 = __importDefault(require("path"));
-const morgan_1 = __importDefault(require("morgan"));
-const cookie_parser_1 = __importDefault(require("cookie-parser"));
-let indexRouter = require("./routes/index.ts");
-let usersRouter = require("/routes/users");
+var http_errors_1 = require("http-errors");
+var express_1 = require("express");
+var path_1 = require("path");
+var morgan_1 = require("morgan");
+var cookie_parser_1 = require("cookie-parser");
+var indexRouter = require("./routes/index.ts");
+var usersRouter = require("/routes/users");
 exports.app = (0, express_1.default)();
 // view engine setup
 exports.app.set("views", path_1.default.join(__dirname, "views"));

@@ -17,16 +17,16 @@ const mongoose_1 = __importDefault(require("mongoose"));
 let cachedPromise = null;
 const connectToDatabase = () => __awaiter(void 0, void 0, void 0, function* () {
     if (!process.env.JWT_KEY) {
-        throw new Error('JWT_KEY must be defined');
+        throw new Error("JWT_KEY must be defined");
     }
     if (!process.env.MONGO_URI) {
-        throw new Error('MONGO_URI must be defined');
+        throw new Error("MONGO_URI must be defined");
     }
     if (!cachedPromise) {
         cachedPromise = mongoose_1.default.connect(process.env.MONGO_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            useCreateIndex: true
+            useCreateIndex: true,
         });
     }
     return cachedPromise;

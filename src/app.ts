@@ -7,7 +7,7 @@ import cookieParser from "cookie-parser";
 let indexRouter = require("./routes/index.ts");
 let usersRouter = require("/routes/users");
 
-export let app = Express();
+let app = Express();
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));

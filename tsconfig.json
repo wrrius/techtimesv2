@@ -1,13 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es2016",
-    "outDir": "src",
+    "outDir": "build",
+    "rootDir": "src",
     "module": "commonjs",
-    "rootDir": "./src",
+    "target": "es2016",
+    "resolveJsonModule": true,
     "sourceMap": true,
     "noImplicitAny": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "allowJs": true
   }
 }

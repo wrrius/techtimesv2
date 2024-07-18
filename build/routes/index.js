@@ -28,3 +28,4 @@ const connectToDatabase = () => __awaiter(void 0, void 0, void 0, function* () {
     return cachedPromise;
 });
 exports.connectToDatabase = connectToDatabase;
+//# sourceMappingURL=index.js.map

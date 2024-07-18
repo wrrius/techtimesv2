@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "tsc",
-    "start": "node src/bin/www"
+    "dev": "node src/bin/www.mjs"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
@@ -14,7 +14,6 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "http-errors": "^2.0.0",
-    "jade": "^1.11.0",
     "mongoose": "^8.5.1",
     "morgan": "^1.10.0",
     "typescript": "^5.5.3"

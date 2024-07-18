@@ -13,7 +13,6 @@ let usersRouter = require("/routes/users");
 let app = (0, express_1.default)();
 // view engine setup
 app.set("views", path_1.default.join(__dirname, "views"));
-app.set("view engine", "jade");
 app.use((0, morgan_1.default)("dev"));
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: false }));

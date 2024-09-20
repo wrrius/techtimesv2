@@ -11,7 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.articlesHomepage = void 0;
 const index_1 = require("../../routes/index");
-const homepage_ts_1 = require("../../models/articles/homepage.ts");
+const homepage_js_1 = require("../../models/articles/homepage.js");
 const articlesHomepage = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         yield (0, index_1.connectToDatabase)();
@@ -22,7 +22,7 @@ const articlesHomepage = (req, res) => __awaiter(void 0, void 0, void 0, functio
         if (req.query.position) {
             query.position = req.query.position.toString();
         }
-        const homepages = yield homepage_ts_1.Homepage.find(query);
+        const homepages = yield homepage_js_1.Homepage.find(query);
         res.send(homepages);
     }
     catch (error) {

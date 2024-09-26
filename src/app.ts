@@ -49,4 +49,4 @@ app.use(function (
 
 // module.exports = app;
 
-export { app };
+exports.module = app;
